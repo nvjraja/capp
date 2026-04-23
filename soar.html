@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CASSPHERE SOAR — the Autonomous SOC for a single security team. A deterministic static layer that always closes routine alerts, plus glass-box agentic AI that triages, investigates, and recommends. Single-tenant, your data, your VM, analyst always in control.">
+    <meta name="keywords" content="Autonomous SOC, SOAR, Agentic AI SOC, Glass-box AI, Explainable AI, Security Orchestration Automation Response, Playbook Engine, DAG Playbooks, AI SOC Analyst, Autonomous Triage, L2 Investigation, Agent Governance, ISO 42001, MCP Tools, Human-in-the-loop, Threat Intelligence, Incident Response, Single-tenant SOAR">
+    <title>SOAR Platform | CASSPHERE &mdash; The Autonomous SOC. With Glass-box AI.</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='14' fill='%230066cc'/><text x='16' y='21' text-anchor='middle' fill='white' font-size='14' font-family='Inter,sans-serif' font-weight='700'>C</text></svg>">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <svg class="logo-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="20" cy="20" r="18" stroke="currentColor" stroke-width="2.5"/>
+                    <circle cx="20" cy="20" r="10" stroke="currentColor" stroke-width="1.5" opacity="0.6"/>
+                    <circle cx="20" cy="20" r="3" fill="currentColor"/>
+                    <line x1="20" y1="2" x2="20" y2="10" stroke="currentColor" stroke-width="1.5" opacity="0.4"/>
+                    <line x1="20" y1="30" x2="20" y2="38" stroke="currentColor" stroke-width="1.5" opacity="0.4"/>
+                    <line x1="2" y1="20" x2="10" y2="20" stroke="currentColor" stroke-width="1.5" opacity="0.4"/>
+                    <line x1="30" y1="20" x2="38" y2="20" stroke="currentColor" stroke-width="1.5" opacity="0.4"/>
+                </svg>
+                <span>CASSPHERE</span>
+            </a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html#products">Products</a></li>
+                <li><a href="index.html#why-us">Why Us</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+                <li><a href="index.html#contact" class="btn btn-nav">Get Started</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero ls-hero" id="hero">
+        <div class="hero-bg"></div>
+        <div class="container hero-content">
+            <div class="hero-badge">The Autonomous SOC &middot; For Your Team</div>
+            <h1>Autonomous SOC.<br><span class="text-accent">Glass-box AI.</span></h1>
+            <p class="hero-subtitle">CASSPHERE SOAR is the autonomous SOC your security team runs &mdash; not one a vendor runs for you. A deterministic static layer always closes the routine alerts. Glass-box agentic AI takes the investigations &mdash; triaging, reasoning, and recommending with every step auditable. Single-tenant by design. The analyst keeps the last click, always.</p>
+            <div class="hero-cta">
+                <a href="index.html#contact" class="btn btn-primary btn-lg">Talk to Us</a>
+                <a href="#features" class="btn btn-outline btn-lg">See Features</a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-number">24/7</span>
+                    <span class="stat-label">Autonomous Triage</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-number">100%</span>
+                    <span class="stat-label">Alert Coverage</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-number">44 &middot; 8</span>
+                    <span class="stat-label">MCP Tools &middot; SOC Agents</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why SOAR — 3 pillars -->
+    <section class="why-us" id="why-soar">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Why CASSPHERE SOAR</span>
+                <h2>Autonomous, transparent,<br>and accountable &mdash; by design</h2>
+                <p>Most autonomous SOC tools ask you to trust a black box. Ours shows its work. Most assume the AI should run everything; ours assumes the analyst should, and lets the AI earn its autonomy step by step.</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card" data-animate>
+                    <div class="feature-number">01</div>
+                    <h3>Static layer that always works</h3>
+                    <p>Deterministic enrichment, auto-action rules, and DAG playbooks resolve known alerts in seconds &mdash; no model, no API key, no guesswork. If the LLM is down, your SOC still runs.</p>
+                </div>
+                <div class="feature-card" data-animate>
+                    <div class="feature-number">02</div>
+                    <h3>Autonomous AI with glass-box reasoning</h3>
+                    <p>8 SOC agents triage, investigate, and recommend &mdash; L2-depth, not Tier-1 fluff. Every tool call, every piece of evidence, every confidence score is visible on the alert. No black-box verdicts; no mystery actions.</p>
+                </div>
+                <div class="feature-card" data-animate>
+                    <div class="feature-number">03</div>
+                    <h3>Human-in-control agent governance</h3>
+                    <p>Dangerous actions pause for analyst approval &mdash; 24-hour TTL, immutable audit trail, global kill switch, per-action-type toggles, model-version pinning. The governance foundation ISO 42001 asks for, built-in on day one.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Pipeline -->
+    <section class="services" id="pipeline">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">How it works</span>
+                <h2>Webhook to resolution &mdash; one pipeline</h2>
+                <p>Every alert flows through the same deterministic steps. Agents join the pipeline as just another step &mdash; optional, observable, overridable.</p>
+            </div>
+
+            <div class="pipeline-flow" data-animate>
+                <div class="pipeline-step">
+                    <div class="pipeline-num">1</div>
+                    <h4>Ingest</h4>
+                    <p>Webhook &rarr; Kafka &rarr; normalize</p>
+                </div>
+                <div class="pipeline-arrow" aria-hidden="true">&rarr;</div>
+                <div class="pipeline-step">
+                    <div class="pipeline-num">2</div>
+                    <h4>Enrich</h4>
+                    <p>3-layer IOC enrichment &middot; TI providers</p>
+                </div>
+                <div class="pipeline-arrow" aria-hidden="true">&rarr;</div>
+                <div class="pipeline-step pipeline-step-soar-core">
+                    <div class="pipeline-num">3</div>
+                    <h4>Auto-action</h4>
+                    <p>Deterministic rules &middot; route &middot; suppress</p>
+                </div>
+                <div class="pipeline-arrow" aria-hidden="true">&rarr;</div>
+                <div class="pipeline-step">
+                    <div class="pipeline-num">4</div>
+                    <h4>Playbook</h4>
+                    <p>DAG execution &middot; approval gates</p>
+                </div>
+                <div class="pipeline-arrow" aria-hidden="true">&rarr;</div>
+                <div class="pipeline-step">
+                    <div class="pipeline-num">5</div>
+                    <h4>Agent triage</h4>
+                    <p>L1 / L2 AI agents &middot; MCP tools</p>
+                </div>
+                <div class="pipeline-arrow" aria-hidden="true">&rarr;</div>
+                <div class="pipeline-step">
+                    <div class="pipeline-num">6</div>
+                    <h4>Resolve</h4>
+                    <p>Verdict &middot; case &middot; audit trail</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Grid -->
+    <section class="services" id="features" style="background: var(--gray-50);">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Platform features</span>
+                <h2>The SOC your analyst would build</h2>
+                <p>Built from real SOC workflows &mdash; not vendor slide-decks. Every capability is a first-class module you can enable, tune, audit, or disable. No forced autonomy, no opaque verdicts, no charge-per-alert.</p>
+            </div>
+
+            <div class="services-grid">
+                <!-- Static Enrichment Engine -->
+                <div class="service-card" data-animate>
+                    <div class="service-icon">
+                        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="24" cy="24" r="18" stroke="currentColor" stroke-width="2"/>
+                            <path d="M24 6 L24 42 M6 24 L42 24" stroke="currentColor" stroke-width="1.5" opacity="0.4"/>
+                            <circle cx="24" cy="24" r="6" fill="currentColor" fill-opacity="0.12" stroke="currentColor" stroke-width="2"/>
+                            <circle cx="24" cy="24" r="2" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <h3>3-layer IOC enrichment</h3>
+                    <p>Admin-authored rules, normalization-level hints, and regex IOC sweep &mdash; in that order. Tracker lists filter out internal IPs and known-benign indicators before any TI call is made. Cross-alert dedup via the observable store.</p>
+                    <ul class="service-features">
+                        <li>AbuseIPDB, AlienVault OTX, VirusTotal, MISP</li>
+                        <li>Observable store with TTL-backed cache</li>
+                        <li>Tracker lists &mdash; allowlist, blocklist, internal CIDRs</li>
+                    </ul>
+                </div>
+
+                <!-- Auto-Action Engine -->
+                <div class="service-card" data-animate>
+                    <div class="service-icon">
+                        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="6" y="8" width="36" height="32" rx="3" stroke="currentColor" stroke-width="2"/>
+                            <line x1="12" y1="16" x2="24" y2="16" stroke="currentColor" stroke-width="2"/>
+                            <line x1="12" y1="24" x2="30" y2="24" stroke="currentColor" stroke-width="2"/>
+                            <line x1="12" y1="32" x2="20" y2="32" stroke="currentColor" stroke-width="2"/>
+                            <circle cx="36" cy="16" r="2.5" fill="currentColor" fill-opacity="0.6"/>
+                            <circle cx="36" cy="24" r="2.5" fill="currentColor"/>
+                            <circle cx="36" cy="32" r="2.5" fill="currentColor" fill-opacity="0.3"/>
+                        </svg>
+                    </div>
+                    <h3>Auto-action rules</h3>
+                    <p>11 deterministic actions &mdash; set_status, assign_to, escalate_to_tier, add_tag, add_comment, suppress, trigger_playbook, link_to_case, correlate_and_case, and more. Dry-run first, promote to live. Every rule fires within a conflict-detection envelope.</p>
+                    <ul class="service-features">
+                        <li>Dry-run mode with full audit trail</li>
+                        <li>Condition DSL: equals, in, in_tracker, not_equals&hellip;</li>
+                        <li>Correlation-driven auto-case creation</li>
+                    </ul>
+                </div>
+
+                <!-- DAG Playbook Engine -->
+                <div class="service-card" data-animate>
+                    <div class="service-icon">
+                        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="10" cy="10" r="4" stroke="currentColor" stroke-width="2"/>
+                            <circle cx="38" cy="10" r="4" stroke="currentColor" stroke-width="2"/>
+                            <circle cx="24" cy="24" r="4" stroke="currentColor" stroke-width="2" fill="currentColor" fill-opacity="0.15"/>
+                            <circle cx="10" cy="38" r="4" stroke="currentColor" stroke-width="2"/>
+                            <circle cx="38" cy="38" r="4" stroke="currentColor" stroke-width="2"/>
+                            <line x1="14" y1="10" x2="20" y2="22" stroke="currentColor" stroke-width="1.5"/>
+                            <line x1="34" y1="10" x2="28" y2="22" stroke="currentColor" stroke-width="1.5"/>
+                            <line x1="20" y1="26" x2="14" y2="38" stroke="currentColor" stroke-width="1.5"/>
+                            <line x1="28" y1="26" x2="34" y2="38" stroke="currentColor" stroke-width="1.5"/>
+                        </svg>
+                    </div>
+                    <h3>DAG playbook engine</h3>
+                    <p>Visual DAG builder with 6 node types: start, action, condition, approval, ai_agent, end. Static paths always execute; AI nodes degrade gracefully if the LLM is unavailable. 8 seeded playbooks cover phishing, malware, identity, DLP, brand-protection, EDR, and universal triage.</p>
+                    <ul class="service-features">
+                        <li>Static and dynamic paths in one DAG</li>
+                        <li>Approval gates &mdash; 24h TTL, audit-logged</li>
+                        <li>Per-device-type trigger conditions</li>
+                    </ul>
+                </div>
+
+                <!-- Agentic AI Engine -->
+                <div class="service-card" data-animate>
+                    <div class="service-icon">
+                        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="24" cy="20" r="10" stroke="currentColor" stroke-width="2"/>
+                            <circle cx="24" cy="20" r="4" fill="currentColor"/>
+                            <path d="M14 30 C14 36 19 40 24 40 C29 40 34 36 34 30" stroke="currentColor" stroke-width="2" fill="currentColor" fill-opacity="0.08"/>
+                            <line x1="24" y1="4" x2="24" y2="8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            <line x1="8" y1="20" x2="12" y2="20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            <line x1="36" y1="20" x2="40" y2="20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3>Autonomous SOC agents</h3>
+                    <p>8 pre-configured agents across L1 triage, L2 investigation, threat intel, incident response, and management. Three autonomy tiers (direct LLM &rarr; scoped agent &rarr; full autonomy). Device-type-aware prompts for firewall, EDR, email, identity, DLP, threat-intel, SIEM, and rating providers. Multi-provider LLM &mdash; OpenAI, Anthropic, Ollama, local.</p>
+                    <ul class="service-features">
+                        <li>L2-depth triage &mdash; not Tier-1 fluff</li>
+                        <li>44 MCP tools &middot; publishable as an open MCP server</li>
+                        <li>Guardrails: max turns, blocked tools, timeout, cost cap</li>
+                    </ul>
+                </div>
+
+                <!-- Glass-box Reasoning (NEW) -->
+                <div class="service-card" data-animate>
+                    <div class="service-icon">
+                        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="22" cy="22" r="14" stroke="currentColor" stroke-width="2"/>
+                            <line x1="32" y1="32" x2="42" y2="42" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+                            <circle cx="22" cy="18" r="2.5" fill="currentColor"/>
+                            <path d="M16 28 C18 25 20 24 22 24 C24 24 26 25 28 28" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/>
+                        </svg>
+                    </div>
+                    <h3>Glass-box reasoning</h3>
+                    <p>No black-box verdicts. Every agent decision shows the tool calls made, the evidence gathered, the MITRE tactics matched, and the confidence score &mdash; displayed inline on the alert. If the verdict is wrong, the path to wrong is visible. Analysts coach the agent in natural language; the agent learns from every override.</p>
+                    <ul class="service-features">
+                        <li>Per-decision evidence chain with citations</li>
+                        <li>MITRE ATT&amp;CK tactic + confidence tagging</li>
+                        <li>Natural-language coaching &amp; override history</li>
+                    </ul>
+                </div>
+
+                <!-- Alert Processing Pipeline -->
+                <div class="service-card" data-animate>
+                    <div class="service-icon">
+                        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="4" y="8" width="16" height="10" rx="2" stroke="currentColor" stroke-width="2"/>
+                            <rect x="4" y="20" width="16" height="10" rx="2" stroke="currentColor" stroke-width="2"/>
+                            <rect x="4" y="32" width="16" height="10" rx="2" stroke="currentColor" stroke-width="2"/>
+                            <path d="M20 13 L30 24 M20 25 L30 24 M20 37 L30 24" stroke="currentColor" stroke-width="1.5" opacity="0.5"/>
+                            <rect x="30" y="18" width="14" height="12" rx="2" stroke="currentColor" stroke-width="2" fill="currentColor" fill-opacity="0.08"/>
+                        </svg>
+                    </div>
+                    <h3>Normalization &amp; routing</h3>
+                    <p>Webhook &rarr; Kafka &rarr; normalize &rarr; dedup. ECS-aligned field mapping handles poly-shape payloads (dict-or-list tolerance for nested fields). 9 pre-built normalization configs for Avanan, BitSight, CrowdStrike, Devo, Identity Protection, Microsoft DLP, SecurityScorecard, SOCRadar.</p>
+                    <ul class="service-features">
+                        <li>ECS &amp; OCSF-aligned field names</li>
+                        <li>Hash-based dedup with event-time precedence</li>
+                        <li>Pipeline token guard &mdash; no out-of-band writes</li>
+                    </ul>
+                </div>
+
+                <!-- Attack-chain Intelligence (was Intelligence Router) -->
+                <div class="service-card" data-animate>
+                    <div class="service-icon">
+                        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="24" cy="24" r="6" fill="currentColor" fill-opacity="0.15" stroke="currentColor" stroke-width="2"/>
+                            <circle cx="8" cy="12" r="3" stroke="currentColor" stroke-width="2"/>
+                            <circle cx="40" cy="12" r="3" stroke="currentColor" stroke-width="2"/>
+                            <circle cx="8" cy="36" r="3" stroke="currentColor" stroke-width="2"/>
+                            <circle cx="40" cy="36" r="3" stroke="currentColor" stroke-width="2"/>
+                            <line x1="11" y1="13" x2="20" y2="21" stroke="currentColor" stroke-width="1.5"/>
+                            <line x1="37" y1="13" x2="28" y2="21" stroke="currentColor" stroke-width="1.5"/>
+                            <line x1="11" y1="35" x2="20" y2="27" stroke="currentColor" stroke-width="1.5"/>
+                            <line x1="37" y1="35" x2="28" y2="27" stroke="currentColor" stroke-width="1.5"/>
+                        </svg>
+                    </div>
+                    <h3>Attack-chain intelligence</h3>
+                    <p>Cross-alert correlation turns isolated tickets into campaigns. Entity context, blast radius, related alerts, root-cause trace, MITRE phase prediction, attack-sequence scoring. Surfaces shared IOCs, timelines, and the adversary&rsquo;s likely next move across your fleet.</p>
+                    <ul class="service-features">
+                        <li>Blast-radius quantification per alert</li>
+                        <li>MITRE phase prediction on-demand</li>
+                        <li>Shared-IOC campaign detection</li>
+                    </ul>
+                </div>
+
+                <!-- Human-in-the-Loop Approvals -->
+                <div class="service-card" data-animate>
+                    <div class="service-icon">
+                        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M24 4 L40 10 L40 24 C40 34 33 42 24 44 C15 42 8 34 8 24 L8 10 Z" stroke="currentColor" stroke-width="2" fill="currentColor" fill-opacity="0.08"/>
+                            <path d="M17 24 L22 29 L32 19" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3>Approval queue</h3>
+                    <p>AI agents pause before any dangerous tool call: block_ip, isolate_host, disable_user, delete_alert. The session goes to <code>pending_approval</code>, analyst reviews in the Approvals tab, approves or rejects, and the agent resumes with the result fed back in-context.</p>
+                    <ul class="service-features">
+                        <li>24-hour TTL &middot; auto-expire stale requests</li>
+                        <li>Full context: tool, inputs, agent reasoning</li>
+                        <li>Reject returns a message to the agent &mdash; no silent ignore</li>
+                    </ul>
+                </div>
+
+                <!-- Case Management -->
+                <div class="service-card" data-animate>
+                    <div class="service-icon">
+                        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="6" y="12" width="36" height="28" rx="3" stroke="currentColor" stroke-width="2"/>
+                            <path d="M18 12 L18 8 C18 6 19 4 21 4 L27 4 C29 4 30 6 30 8 L30 12" stroke="currentColor" stroke-width="2"/>
+                            <line x1="12" y1="22" x2="36" y2="22" stroke="currentColor" stroke-width="1.5"/>
+                            <line x1="12" y1="28" x2="30" y2="28" stroke="currentColor" stroke-width="1.5"/>
+                            <line x1="12" y1="34" x2="24" y2="34" stroke="currentColor" stroke-width="1.5"/>
+                        </svg>
+                    </div>
+                    <h3>Case management</h3>
+                    <p>Every alert can escalate into a case or join an existing one via correlate-and-case rules. Cases bundle alerts, artifacts, comments, playbook runs, and AI sessions into a single investigation timeline with disposition and MTTR tracking.</p>
+                    <ul class="service-features">
+                        <li>Auto-linking by shared IOC + time window</li>
+                        <li>Multi-alert disposition &amp; merge</li>
+                        <li>MTTR, MTTA, SLA breach KPIs</li>
+                    </ul>
+                </div>
+
+                <!-- Self-learning Knowledge Hub -->
+                <div class="service-card" data-animate>
+                    <div class="service-icon">
+                        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8 8 L24 4 L40 8 L40 40 L24 44 L8 40 Z" stroke="currentColor" stroke-width="2" fill="currentColor" fill-opacity="0.06"/>
+                            <line x1="24" y1="4" x2="24" y2="44" stroke="currentColor" stroke-width="2"/>
+                            <line x1="14" y1="14" x2="20" y2="14" stroke="currentColor" stroke-width="1.5"/>
+                            <line x1="14" y1="20" x2="20" y2="20" stroke="currentColor" stroke-width="1.5"/>
+                            <line x1="14" y1="26" x2="20" y2="26" stroke="currentColor" stroke-width="1.5"/>
+                            <line x1="28" y1="14" x2="34" y2="14" stroke="currentColor" stroke-width="1.5"/>
+                            <line x1="28" y1="20" x2="34" y2="20" stroke="currentColor" stroke-width="1.5"/>
+                        </svg>
+                    </div>
+                    <h3>Self-learning knowledge hub</h3>
+                    <p>False-positive patterns surface automatically from resolved alerts and become auto-close rules for future matches. Runbooks, asset/user/network-zone lookups, and IOC history ground agent reasoning via the <code>search_knowledge</code> MCP tool. Your SOC gets smarter with every incident &mdash; not reset every time an analyst leaves.</p>
+                    <ul class="service-features">
+                        <li>Auto-FP pattern learning from resolutions</li>
+                        <li>Runbook library &mdash; AI-groundable context</li>
+                        <li>Asset, user, network-zone lookups</li>
+                    </ul>
+                </div>
+
+                <!-- Agent Governance & Audit (was Autonomy Policy) -->
+                <div class="service-card" data-animate>
+                    <div class="service-icon">
+                        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="10" y="18" width="28" height="22" rx="3" stroke="currentColor" stroke-width="2"/>
+                            <path d="M16 18 L16 12 C16 8 19 4 24 4 C29 4 32 8 32 12 L32 18" stroke="currentColor" stroke-width="2"/>
+                            <circle cx="24" cy="28" r="3" stroke="currentColor" stroke-width="2" fill="currentColor"/>
+                            <line x1="24" y1="31" x2="24" y2="35" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3>Agent governance &amp; audit</h3>
+                    <p>Enterprise-grade AI governance, not an afterthought. Per-action-type autonomy toggles, one-click global kill switch, protected-network lists, model-version pinning, hash-chained audit trail of every agent decision. The controls compliance teams ask for &mdash; including ISO 42001-style attestations.</p>
+                    <ul class="service-features">
+                        <li>Per-action-type enable/disable &middot; granular</li>
+                        <li>Hash-chained immutable audit trail</li>
+                        <li>Global kill switch &middot; emergency stop</li>
+                    </ul>
+                </div>
+
+                <!-- Bundled Threat Intelligence (NEW) -->
+                <div class="service-card" data-animate>
+                    <div class="service-icon">
+                        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="24" cy="24" r="18" stroke="currentColor" stroke-width="2" fill="currentColor" fill-opacity="0.05"/>
+                            <path d="M8 24 L40 24 M24 8 L24 40" stroke="currentColor" stroke-width="1.5" opacity="0.4"/>
+                            <path d="M24 8 C16 16 16 32 24 40 M24 8 C32 16 32 32 24 40" stroke="currentColor" stroke-width="1.5" fill="none" opacity="0.4"/>
+                            <circle cx="24" cy="24" r="4" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <h3>Threat intelligence &mdash; included</h3>
+                    <p>TI is a feature, not an upsell. AbuseIPDB, AlienVault OTX, VirusTotal, and MISP wired into the enrichment pipeline out of the box. Per-IOC caching and TTL-backed observable store keep provider calls low; provider health &amp; usage tracked on every query. Zero extra line-item on the quote.</p>
+                    <ul class="service-features">
+                        <li>4 TI providers wired &mdash; no extra integrations to buy</li>
+                        <li>Cross-alert observable store &middot; IOC dedup built-in</li>
+                        <li>Provider health &middot; rate limits &middot; usage tracked</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="service-platforms" style="justify-content:center; margin-top: 3rem; gap: 0.75rem;">
+                <span class="platform-tag">CrowdStrike Falcon</span>
+                <span class="platform-tag">Microsoft Defender</span>
+                <span class="platform-tag">Avanan / Check Point</span>
+                <span class="platform-tag">Microsoft DLP</span>
+                <span class="platform-tag">Identity Protection</span>
+                <span class="platform-tag">Devo SIEM</span>
+                <span class="platform-tag">BitSight</span>
+                <span class="platform-tag">SecurityScorecard</span>
+                <span class="platform-tag">SOCRadar</span>
+                <span class="platform-tag">AbuseIPDB</span>
+                <span class="platform-tag">AlienVault OTX</span>
+                <span class="platform-tag">MISP</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Architecture -->
+    <section class="about" id="architecture">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-content" data-animate>
+                    <span class="section-tag">Architecture</span>
+                    <h2>Single tenant.<br>Single process.<br>Single source of truth.</h2>
+                    <p>CASSPHERE SOAR deploys to <em>your</em> VM &mdash; not a shared cloud tenant. One FastAPI process holds the alert module, agentic AI engine, playbook engine, webhooks, and pipeline against a single PostgreSQL database. No multi-tenant routing, no noisy neighbours, no data leaving your perimeter. When you need to scale, scale vertically; we don&rsquo;t charge per alert.</p>
+                    <div class="about-highlights">
+                        <div class="highlight">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            <span>Single-tenant &mdash; your SOC, your VM, your data</span>
+                        </div>
+                        <div class="highlight">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            <span>FastAPI backend &middot; unified process &middot; no service-mesh tax</span>
+                        </div>
+                        <div class="highlight">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            <span>PostgreSQL &middot; single <code>soardb</code> for all modules</span>
+                        </div>
+                        <div class="highlight">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            <span>Apache Kafka &middot; decoupled alert pipeline</span>
+                        </div>
+                        <div class="highlight">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            <span>Open MCP server &mdash; 44 tools for any MCP-compatible agent</span>
+                        </div>
+                        <div class="highlight">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            <span>Docker-first &mdash; on-prem, private cloud, or air-gapped</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-visual" data-animate>
+                    <div class="visual-card">
+                        <div class="visual-header">
+                            <span class="visual-dot"></span>
+                            <span class="visual-dot"></span>
+                            <span class="visual-dot"></span>
+                        </div>
+                        <div class="visual-content">
+                            <div class="visual-line"><span class="v-comment"># A playbook node &mdash; static action with optional AI enhancement</span></div>
+                            <div class="visual-line"><span class="v-keyword">node</span> <span class="v-name">enrich_iocs</span> {</div>
+                            <div class="visual-line indent"><span class="v-prop">type:</span> <span class="v-string">"action"</span></div>
+                            <div class="visual-line indent"><span class="v-prop">tool:</span> <span class="v-string">"soar:enrich_alert"</span></div>
+                            <div class="visual-line indent"><span class="v-prop">on_success:</span> <span class="v-string">"ai_analyze"</span></div>
+                            <div class="visual-line indent"><span class="v-prop">on_failure:</span> <span class="v-string">"manual_review"</span></div>
+                            <div class="visual-line">}</div>
+                            <div class="visual-line"></div>
+                            <div class="visual-line"><span class="v-keyword">node</span> <span class="v-name">ai_analyze</span> {</div>
+                            <div class="visual-line indent"><span class="v-prop">type:</span> <span class="v-string">"ai_agent"</span></div>
+                            <div class="visual-line indent"><span class="v-prop">agent:</span> <span class="v-string">"L2 SOC Analyst"</span></div>
+                            <div class="visual-line indent"><span class="v-prop">optional:</span> <span class="v-num">true</span> <span class="v-comment">// degrades to static path</span></div>
+                            <div class="visual-line indent"><span class="v-prop">on_success:</span> <span class="v-string">"verdict_gate"</span></div>
+                            <div class="visual-line">}</div>
+                            <div class="visual-line"></div>
+                            <div class="visual-line"><span class="v-keyword">node</span> <span class="v-name">verdict_gate</span> {</div>
+                            <div class="visual-line indent"><span class="v-prop">type:</span> <span class="v-string">"approval"</span></div>
+                            <div class="visual-line indent"><span class="v-prop">ttl_hours:</span> <span class="v-num">24</span></div>
+                            <div class="visual-line indent"><span class="v-prop">required_role:</span> <span class="v-string">"l2_analyst"</span></div>
+                            <div class="visual-line">}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Device Coverage -->
+    <section class="services" id="coverage" style="background: var(--gray-50);">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Out-of-the-box coverage</span>
+                <h2>Every major device type &mdash; with a playbook</h2>
+                <p>Each integration ships with a normalization config, an enrichment rule set, auto-action routing, and a ready-to-run playbook. No 6-month content-engineering project to get value.</p>
+            </div>
+            <div class="roadmap-grid">
+                <div class="roadmap-card" data-animate>
+                    <div class="roadmap-phase">Endpoint &amp; Email</div>
+                    <div class="roadmap-status">Ready</div>
+                    <h3>EDR &amp; email security</h3>
+                    <ul>
+                        <li>CrowdStrike Falcon &mdash; malware, execution, persistence</li>
+                        <li>Avanan / Check Point &mdash; phishing, shadow-IT</li>
+                        <li>Microsoft Defender &mdash; via M365 connectors</li>
+                    </ul>
+                </div>
+                <div class="roadmap-card" data-animate>
+                    <div class="roadmap-phase">Identity &amp; Data</div>
+                    <div class="roadmap-status">Ready</div>
+                    <h3>Identity &amp; DLP</h3>
+                    <ul>
+                        <li>Azure AD Identity Protection &mdash; risky sign-ins</li>
+                        <li>Microsoft DLP &mdash; PII exfiltration, policy matches</li>
+                        <li>Identity-team auto-routing &amp; tier-2 escalation</li>
+                    </ul>
+                </div>
+                <div class="roadmap-card" data-animate>
+                    <div class="roadmap-phase">External risk</div>
+                    <div class="roadmap-status">Ready</div>
+                    <h3>Rating &amp; threat intel</h3>
+                    <ul>
+                        <li>BitSight &amp; SecurityScorecard &mdash; posture findings</li>
+                        <li>SOCRadar &mdash; brand, dark-web, credential leaks</li>
+                        <li>Devo SIEM &mdash; universal-triage playbook</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="contact" id="cta">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Get in touch</span>
+                <h2>See the autonomous SOC run on your alerts</h2>
+                <p>Send us a sample of your current alert traffic. We&rsquo;ll show you exactly what the static layer resolves without any AI, and what the agents add on top &mdash; every tool call and every verdict visible in the glass-box log. Deployed to your VM, not our cloud. You keep your data; we keep the conversation short.</p>
+            </div>
+            <div style="display:flex; justify-content:center; gap:1rem; flex-wrap:wrap;">
+                <a href="index.html#contact" class="btn btn-primary btn-lg">Talk to Us</a>
+                <a href="index.html#products" class="btn btn-outline btn-lg">See All Products</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <svg class="logo-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="20" cy="20" r="18" stroke="currentColor" stroke-width="2.5"/>
+                            <circle cx="20" cy="20" r="10" stroke="currentColor" stroke-width="1.5" opacity="0.6"/>
+                            <circle cx="20" cy="20" r="3" fill="currentColor"/>
+                        </svg>
+                        <span>CASSPHERE</span>
+                    </a>
+                    <p>Intelligent security products for the AI era. We build the platforms that protect your business.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Products</h4>
+                    <ul>
+                        <li><a href="soar.html">SOAR Platform</a></li>
+                        <li><a href="logsphere.html">LogSphere</a></li>
+                        <li><a href="index.html#products">DLP Alert Monitoring</a></li>
+                        <li><a href="index.html#products">Agentic AI Engine</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="index.html#about">About</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                        <li><a href="index.html#why-us">Why CASSPHERE</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 CASSPHERE. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

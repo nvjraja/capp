@@ -113,6 +113,7 @@
                         <span class="platform-tag">Cases</span>
                         <span class="platform-tag">Integrations</span>
                     </div>
+                    <a href="soar.html" class="service-card-link">Explore SOAR</a>
                 </div>
 
                 <!-- Log Management -->
@@ -132,21 +133,22 @@
                             <line x1="18" y1="42" x2="30" y2="42" stroke="currentColor" stroke-width="2"/>
                         </svg>
                     </div>
-                    <h3>Log Management</h3>
-                    <p>Centralized log collection, normalization, and analysis platform. Ingest logs from any source, search in real time, and build detection rules that catch real threats.</p>
+                    <h3>LogSphere &mdash; Log Management</h3>
+                    <p>Open-format log management platform. Normalize to OCSF, store as Parquet, and forward only the filtered stream to your SIEM &mdash; cutting cost without sacrificing compliance.</p>
                     <ul class="service-features">
-                        <li>Universal log ingestion &amp; normalization</li>
-                        <li>Real-time search &amp; correlation</li>
-                        <li>Detection rule engine &amp; tuning</li>
-                        <li>Compliance-ready retention &amp; archival</li>
-                        <li>MITRE ATT&CK coverage mapping</li>
+                        <li>OCSF 1.8.0 open-schema normalization</li>
+                        <li>Rules engine, dedup &amp; aggregation for noise reduction</li>
+                        <li>Parquet storage before filter &mdash; compliance-safe</li>
+                        <li>DuckDB lakehouse + KQL log search</li>
+                        <li>Per-source pipeline isolation</li>
                     </ul>
                     <div class="service-platforms">
-                        <span class="platform-tag">Syslog</span>
-                        <span class="platform-tag">Cloud Logs</span>
-                        <span class="platform-tag">Endpoint</span>
-                        <span class="platform-tag">Network</span>
+                        <span class="platform-tag">OCSF</span>
+                        <span class="platform-tag">Parquet</span>
+                        <span class="platform-tag">DuckDB</span>
+                        <span class="platform-tag">Kafka</span>
                     </div>
+                    <a href="logsphere.html" class="service-card-link">Explore LogSphere</a>
                 </div>
 
                 <!-- DLP Alert Monitoring -->
@@ -337,7 +339,7 @@
                         <select id="service" name="service">
                             <option value="">Select a product</option>
                             <option value="soar">SOAR Platform</option>
-                            <option value="logs">Log Management</option>
+                            <option value="logs">LogSphere (Log Management)</option>
                             <option value="dlp">DLP Alert Monitoring</option>
                             <option value="ai">Agentic AI Engine</option>
                             <option value="all">All Products</option>
@@ -394,8 +396,8 @@
                 <div class="footer-links">
                     <h4>Products</h4>
                     <ul>
-                        <li><a href="#products">SOAR Platform</a></li>
-                        <li><a href="#products">Log Management</a></li>
+                        <li><a href="soar.html">SOAR Platform</a></li>
+                        <li><a href="logsphere.html">LogSphere</a></li>
                         <li><a href="#products">DLP Alert Monitoring</a></li>
                         <li><a href="#products">Agentic AI Engine</a></li>
                     </ul>

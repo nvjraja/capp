@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="LogSphere — open-format log management and compliance lakehouse. Filter noise before your SIEM, store everything in OCSF + Parquet, keep your data truly yours.">
+    <meta name="keywords" content="LogSphere, Log Management, SIEM, OCSF, Parquet, DuckDB, Compliance Logging, SOC, Data Lake, KQL">
+    <title>LogSphere | CASSPHERE — Open-format log management &amp; compliance lakehouse</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='14' fill='%230066cc'/><text x='16' y='21' text-anchor='middle' fill='white' font-size='14' font-family='Inter,sans-serif' font-weight='700'>C</text></svg>">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <svg class="logo-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="20" cy="20" r="18" stroke="currentColor" stroke-width="2.5"/>
+                    <circle cx="20" cy="20" r="10" stroke="currentColor" stroke-width="1.5" opacity="0.6"/>
+                    <circle cx="20" cy="20" r="3" fill="currentColor"/>
+                    <line x1="20" y1="2" x2="20" y2="10" stroke="currentColor" stroke-width="1.5" opacity="0.4"/>
+                    <line x1="20" y1="30" x2="20" y2="38" stroke="currentColor" stroke-width="1.5" opacity="0.4"/>
+                    <line x1="2" y1="20" x2="10" y2="20" stroke="currentColor" stroke-width="1.5" opacity="0.4"/>
+                    <line x1="30" y1="20" x2="38" y2="20" stroke="currentColor" stroke-width="1.5" opacity="0.4"/>
+                </svg>
+                <span>CASSPHERE</span>
+            </a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html#products">Products</a></li>
+                <li><a href="index.html#why-us">Why Us</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+                <li><a href="index.html#contact" class="btn btn-nav">Get Started</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero ls-hero" id="hero">
+        <div class="hero-bg"></div>
+        <div class="container hero-content">
+            <div class="hero-badge">LogSphere &middot; Log Management Platform</div>
+            <h1>Your Logs. Your Schema.<br><span class="text-accent">Your Lakehouse.</span></h1>
+            <p class="hero-subtitle">LogSphere is an open-format log management platform built to cut SIEM cost, hold compliance-grade retention, and keep your data portable &mdash; normalized to OCSF, stored as Parquet, queried in place with DuckDB.</p>
+            <div class="hero-cta">
+                <a href="index.html#contact" class="btn btn-primary btn-lg">Talk to Us</a>
+                <a href="#features" class="btn btn-outline btn-lg">See Features</a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-number">OCSF</span>
+                    <span class="stat-label">1.8.0 Open Schema</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-number">Parquet</span>
+                    <span class="stat-label">Portable Storage</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-number">100%</span>
+                    <span class="stat-label">Raw Log Retention</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why LogSphere — 3 pillars -->
+    <section class="why-us" id="why-logsphere">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Why LogSphere</span>
+                <h2>Three pillars, one platform</h2>
+                <p>Cut what your SIEM charges you for. Keep what your auditors ask for. Ship it in an open format &mdash; not ours.</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card" data-animate>
+                    <div class="feature-number">01</div>
+                    <h3>Cost reduction</h3>
+                    <p>A configurable rules engine, event-time deduplication, and windowed aggregation drop noise before it reaches your SIEM &mdash; so you pay for signal, not retransmits.</p>
+                </div>
+                <div class="feature-card" data-animate>
+                    <div class="feature-number">02</div>
+                    <h3>Compliance-first</h3>
+                    <p>Every log is written to Parquet <em>before</em> filter or dedup runs. Atomic writes with fsync, crash-safe Kafka offsets, and retention partitioned by date. Nothing is dropped silently.</p>
+                </div>
+                <div class="feature-card" data-animate>
+                    <div class="feature-number">03</div>
+                    <h3>No vendor lock-in</h3>
+                    <p>Normalized to OCSF 1.8.0 &mdash; an open schema, not ours. Stored as Parquet &mdash; readable by DuckDB, Spark, Polars, pandas, or any AI/ML pipeline. The day you leave, your data walks out with you.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Pipeline -->
+    <section class="services" id="pipeline">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">How it works</span>
+                <h2>From raw log to filtered forward &mdash; in one pipeline</h2>
+                <p>Per-source isolation means a noisy feed can&rsquo;t starve the rest. Raw logs are persisted before reduction runs, so compliance and cost-saving don&rsquo;t fight each other.</p>
+            </div>
+
+            <div class="pipeline-flow" data-animate>
+                <div class="pipeline-step">
+                    <div class="pipeline-num">1</div>
+                    <h4>Ingest</h4>
+                    <p>HTTP, Kafka, agents &mdash; per-source isolation</p>
+                </div>
+                <div class="pipeline-arrow" aria-hidden="true">&rarr;</div>
+                <div class="pipeline-step">
+                    <div class="pipeline-num">2</div>
+                    <h4>Parse</h4>
+                    <p>JSON, XML, KV, CEF, syslog, plain text</p>
+                </div>
+                <div class="pipeline-arrow" aria-hidden="true">&rarr;</div>
+                <div class="pipeline-step">
+                    <div class="pipeline-num">3</div>
+                    <h4>Normalize</h4>
+                    <p>OCSF 1.8.0 &mdash; 13 target classes</p>
+                </div>
+                <div class="pipeline-arrow" aria-hidden="true">&rarr;</div>
+                <div class="pipeline-step pipeline-step-highlight">
+                    <div class="pipeline-num">4</div>
+                    <h4>Persist (raw)</h4>
+                    <p>Parquet write before any reduction</p>
+                </div>
+                <div class="pipeline-arrow" aria-hidden="true">&rarr;</div>
+                <div class="pipeline-step">
+                    <div class="pipeline-num">5</div>
+                    <h4>Filter &middot; Dedup &middot; Aggregate</h4>
+                    <p>Rules engine + noise reduction</p>
+                </div>
+                <div class="pipeline-arrow" aria-hidden="true">&rarr;</div>
+                <div class="pipeline-step">
+                    <div class="pipeline-num">6</div>
+                    <h4>Forward</h4>
+                    <p>Filtered stream to your SIEM</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Grid -->
+    <section class="services" id="features" style="background: var(--gray-50);">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Platform features</span>
+                <h2>Everything you need &mdash; nothing you don&rsquo;t</h2>
+                <p>Engineered for SOC teams that care about both the bill and the audit.</p>
+            </div>
+
+            <div class="services-grid">
+                <!-- OCSF Normalization -->
+                <div class="service-card" data-animate>
+                    <div class="service-icon">
+                        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="24" cy="24" r="18" stroke="currentColor" stroke-width="2"/>
+                            <path d="M24 6 L24 42 M6 24 L42 24" stroke="currentColor" stroke-width="1.5" opacity="0.4"/>
+                            <circle cx="24" cy="24" r="6" fill="currentColor" fill-opacity="0.12" stroke="currentColor" stroke-width="2"/>
+                            <circle cx="24" cy="24" r="2" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <h3>OCSF 1.8.0 normalization</h3>
+                    <p>Every vendor log is normalized to an open schema shared with the industry. 13 target OCSF classes cover authentication, process, network, file, DNS, web, API, registry, account change, and more.</p>
+                    <ul class="service-features">
+                        <li>Open schema &mdash; not proprietary</li>
+                        <li>Consistent fields across vendors</li>
+                        <li>Three representations preserved per log</li>
+                    </ul>
+                </div>
+
+                <!-- Per-Source Isolation -->
+                <div class="service-card" data-animate>
+                    <div class="service-icon">
+                        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="4" y="8" width="16" height="10" rx="2" stroke="currentColor" stroke-width="2"/>
+                            <rect x="4" y="20" width="16" height="10" rx="2" stroke="currentColor" stroke-width="2"/>
+                            <rect x="4" y="32" width="16" height="10" rx="2" stroke="currentColor" stroke-width="2"/>
+                            <path d="M20 13 L30 24 M20 25 L30 24 M20 37 L30 24" stroke="currentColor" stroke-width="1.5" opacity="0.5"/>
+                            <rect x="30" y="18" width="14" height="12" rx="2" stroke="currentColor" stroke-width="2" fill="currentColor" fill-opacity="0.08"/>
+                        </svg>
+                    </div>
+                    <h3>Per-source pipeline isolation</h3>
+                    <p>Every source runs its own worker, buffer, and Kafka consumer group. A noisy or slow feed cannot starve the rest. Config updates are lock-protected across batch processing.</p>
+                    <ul class="service-features">
+                        <li>Independent backpressure per source</li>
+                        <li>Step-robust shutdown guarantees final flush</li>
+                        <li>No noisy-neighbor starvation</li>
+                    </ul>
+                </div>
+
+                <!-- Compliance Storage -->
+                <div class="service-card" data-animate>
+                    <div class="service-icon">
+                        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M24 4 L40 10 L40 24 C40 34 33 42 24 44 C15 42 8 34 8 24 L8 10 Z" stroke="currentColor" stroke-width="2" fill="currentColor" fill-opacity="0.08"/>
+                            <path d="M17 24 L22 29 L32 19" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3>Compliance-first storage</h3>
+                    <p>All logs are written to Parquet <em>before</em> filtering or dedup runs. Atomic writes (tmp &rarr; fsync &rarr; rename), a disk-space guard, and Kafka offsets committed only after fsync &mdash; no silent data loss.</p>
+                    <ul class="service-features">
+                        <li>Raw-before-reduce invariant enforced</li>
+                        <li>Atomic, crash-safe Parquet writes</li>
+                        <li>Partitioned by date for easy retention</li>
+                    </ul>
+                </div>
+
+                <!-- Rules Engine -->
+                <div class="service-card" data-animate>
+                    <div class="service-icon">
+                        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="6" y="8" width="36" height="32" rx="3" stroke="currentColor" stroke-width="2"/>
+                            <line x1="12" y1="16" x2="24" y2="16" stroke="currentColor" stroke-width="2"/>
+                            <line x1="12" y1="24" x2="30" y2="24" stroke="currentColor" stroke-width="2"/>
+                            <line x1="12" y1="32" x2="20" y2="32" stroke="currentColor" stroke-width="2"/>
+                            <circle cx="36" cy="16" r="2.5" fill="currentColor" fill-opacity="0.6"/>
+                            <circle cx="36" cy="24" r="2.5" fill="currentColor"/>
+                            <circle cx="36" cy="32" r="2.5" fill="currentColor" fill-opacity="0.3"/>
+                        </svg>
+                    </div>
+                    <h3>Rules engine</h3>
+                    <p>Configurable field-match rules drive DROP, TAG, ROUTE, and TRANSFORM actions. Operators cover equals, contains, regex, ranges, and list membership. Per-log cycle tracking stops infinite fires.</p>
+                    <ul class="service-features">
+                        <li>Primary lever for SIEM cost reduction</li>
+                        <li>Full action set &mdash; drop, tag, route, transform</li>
+                        <li>Rule-cycle protection per log</li>
+                    </ul>
+                </div>
+
+                <!-- Deduplication & Aggregation -->
+                <div class="service-card" data-animate>
+                    <div class="service-icon">
+                        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="4" y="6" width="14" height="14" rx="2" stroke="currentColor" stroke-width="2"/>
+                            <rect x="8" y="10" width="14" height="14" rx="2" stroke="currentColor" stroke-width="2" opacity="0.5"/>
+                            <rect x="12" y="14" width="14" height="14" rx="2" stroke="currentColor" stroke-width="2" opacity="0.25"/>
+                            <path d="M30 20 L42 20 M36 14 L42 20 L36 26" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <rect x="30" y="30" width="14" height="12" rx="2" stroke="currentColor" stroke-width="2" fill="currentColor" fill-opacity="0.08"/>
+                        </svg>
+                    </div>
+                    <h3>Deduplication &amp; aggregation</h3>
+                    <p>Event-time windowed dedup and aggregation collapse retransmits and repeating telemetry using your log&rsquo;s real timestamp &mdash; not wall clock &mdash; so replay and late arrivals behave correctly.</p>
+                    <ul class="service-features">
+                        <li>Configurable windows per source</li>
+                        <li>O(expired) eviction &mdash; no GC stalls</li>
+                        <li>Preserves security signal while cutting volume</li>
+                    </ul>
+                </div>
+
+                <!-- Parser -->
+                <div class="service-card" data-animate>
+                    <div class="service-icon">
+                        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M18 6 L6 24 L18 42" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M30 6 L42 24 L30 42" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <line x1="26" y1="10" x2="22" y2="38" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3>Multi-format parser</h3>
+                    <p>JSON, XML, KV, CEF, syslog, plain text &mdash; all handled. Per-source preset library covers Windows Security, Sysmon, Palo Alto, Fortigate, CloudTrail, and more, with thread-safe format overrides.</p>
+                    <ul class="service-features">
+                        <li>Broad format coverage out of the box</li>
+                        <li>Preset library for common vendors</li>
+                        <li>Narrow exception handling &mdash; no silent swallows</li>
+                    </ul>
+                </div>
+
+                <!-- KQL Search -->
+                <div class="service-card" data-animate>
+                    <div class="service-icon">
+                        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="21" cy="21" r="13" stroke="currentColor" stroke-width="2.5"/>
+                            <line x1="31" y1="31" x2="42" y2="42" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+                            <path d="M15 21 L19 25 L27 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3>KQL log search</h3>
+                    <p>Kibana-style query syntax backed by a hand-written parser. Field names are regex-validated, values are bound as parameters &mdash; injection-proof by construction.</p>
+                    <ul class="service-features">
+                        <li>AND / OR / NOT, wildcards, ranges, free-text</li>
+                        <li>Schema &amp; field-values APIs for autocomplete</li>
+                        <li>Auto-detects event-time column per source</li>
+                    </ul>
+                </div>
+
+                <!-- DuckDB Lakehouse -->
+                <div class="service-card" data-animate>
+                    <div class="service-icon">
+                        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <ellipse cx="24" cy="10" rx="16" ry="5" stroke="currentColor" stroke-width="2"/>
+                            <path d="M8 10 L8 24 C8 27 15 29 24 29 C33 29 40 27 40 24 L40 10" stroke="currentColor" stroke-width="2" fill="none"/>
+                            <path d="M8 24 L8 38 C8 41 15 43 24 43 C33 43 40 41 40 38 L40 24" stroke="currentColor" stroke-width="2" fill="none"/>
+                            <ellipse cx="24" cy="24" rx="16" ry="5" stroke="currentColor" stroke-width="1.5" opacity="0.5"/>
+                        </svg>
+                    </div>
+                    <h3>DuckDB lakehouse queries</h3>
+                    <p>Columnar scans straight over Parquet &mdash; no indexer bottleneck. Parameterized SQL everywhere, <code>union_by_name</code> for schema evolution, snappy compression. Sub-second investigation on typical queries.</p>
+                    <ul class="service-features">
+                        <li>No proprietary index to maintain</li>
+                        <li>SQL-injection-proof by design</li>
+                        <li>Transparent schema evolution</li>
+                    </ul>
+                </div>
+
+                <!-- SIEM Forwarding -->
+                <div class="service-card" data-animate>
+                    <div class="service-icon">
+                        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="4" y="18" width="14" height="12" rx="2" stroke="currentColor" stroke-width="2"/>
+                            <path d="M18 24 L32 24 M26 18 L32 24 L26 30" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <rect x="32" y="12" width="14" height="24" rx="2" stroke="currentColor" stroke-width="2" fill="currentColor" fill-opacity="0.08"/>
+                            <line x1="36" y1="18" x2="42" y2="18" stroke="currentColor" stroke-width="1.5" opacity="0.6"/>
+                            <line x1="36" y1="24" x2="42" y2="24" stroke="currentColor" stroke-width="1.5" opacity="0.6"/>
+                            <line x1="36" y1="30" x2="42" y2="30" stroke="currentColor" stroke-width="1.5" opacity="0.6"/>
+                        </svg>
+                    </div>
+                    <h3>SIEM forwarding</h3>
+                    <p>Route the filtered stream to any downstream SIEM. CRUD over the API, secret-lock UX on credentials, per-destination enable/disable. You pay the downstream bill only for what matters.</p>
+                    <ul class="service-features">
+                        <li>Multiple destinations per source</li>
+                        <li>Credentials never re-exposed after save</li>
+                        <li>Cost-reduced volume &mdash; not raw firehose</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="service-platforms" style="justify-content:center; margin-top: 3rem; gap: 0.75rem;">
+                <span class="platform-tag">Windows Security</span>
+                <span class="platform-tag">Sysmon</span>
+                <span class="platform-tag">Palo Alto</span>
+                <span class="platform-tag">Fortigate</span>
+                <span class="platform-tag">CloudTrail</span>
+                <span class="platform-tag">Zeek</span>
+                <span class="platform-tag">Suricata</span>
+                <span class="platform-tag">Cloudflare</span>
+                <span class="platform-tag">Kubernetes</span>
+                <span class="platform-tag">M365</span>
+                <span class="platform-tag">Okta</span>
+                <span class="platform-tag">CrowdStrike</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Architecture -->
+    <section class="about" id="architecture">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-content" data-animate>
+                    <span class="section-tag">Architecture</span>
+                    <h2>Open stack.<br>Deployed your way.</h2>
+                    <p>LogSphere runs on-prem, in your own cloud, or hosted &mdash; your choice. No proprietary index, no opaque black boxes. Every query, every rule, every byte is visible and exportable.</p>
+                    <div class="about-highlights">
+                        <div class="highlight">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            <span>Python processor &amp; FastAPI control plane</span>
+                        </div>
+                        <div class="highlight">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            <span>Kafka event bus with per-source topics</span>
+                        </div>
+                        <div class="highlight">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            <span>Parquet storage &mdash; local, S3, ADLS, GCS</span>
+                        </div>
+                        <div class="highlight">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            <span>DuckDB query layer &mdash; columnar, in-place</span>
+                        </div>
+                        <div class="highlight">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            <span>React + TypeScript UI for analysts &amp; admins</span>
+                        </div>
+                        <div class="highlight">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            <span>Docker-first deployment &mdash; on-prem or cloud</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-visual" data-animate>
+                    <div class="visual-card">
+                        <div class="visual-header">
+                            <span class="visual-dot"></span>
+                            <span class="visual-dot"></span>
+                            <span class="visual-dot"></span>
+                        </div>
+                        <div class="visual-content">
+                            <div class="visual-line"><span class="v-comment"># A single log, three representations</span></div>
+                            <div class="visual-line"><span class="v-keyword">log</span> <span class="v-name">event_4625</span> {</div>
+                            <div class="visual-line indent"><span class="v-prop">_raw_text:</span> <span class="v-string">"&lt;Event xmlns=...&gt;"</span></div>
+                            <div class="visual-line indent"><span class="v-prop">_vendor_fields:</span> {</div>
+                            <div class="visual-line indent2"><span class="v-prop">TargetUserName:</span> <span class="v-string">"jdoe"</span></div>
+                            <div class="visual-line indent2"><span class="v-prop">IpAddress:</span> <span class="v-string">"10.0.0.5"</span></div>
+                            <div class="visual-line indent"><span class="v-prop">}</span></div>
+                            <div class="visual-line indent"><span class="v-prop">ocsf:</span> {</div>
+                            <div class="visual-line indent2"><span class="v-prop">class_uid:</span> <span class="v-num">3002</span> <span class="v-comment">// Authentication</span></div>
+                            <div class="visual-line indent2"><span class="v-prop">activity_id:</span> <span class="v-num">1</span></div>
+                            <div class="visual-line indent2"><span class="v-prop">status_id:</span> <span class="v-num">2</span> <span class="v-comment">// Failure</span></div>
+                            <div class="visual-line indent2"><span class="v-prop">actor.user.name:</span> <span class="v-string">"jdoe"</span></div>
+                            <div class="visual-line indent2"><span class="v-prop">src_endpoint.ip:</span> <span class="v-string">"10.0.0.5"</span></div>
+                            <div class="visual-line indent"><span class="v-prop">}</span></div>
+                            <div class="visual-line">}</div>
+                            <div class="visual-line"></div>
+                            <div class="visual-line"><span class="v-comment">// Persisted to Parquet before any filter runs.</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Roadmap -->
+    <section class="services" id="roadmap" style="background: var(--gray-50);">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Roadmap</span>
+                <h2>Shipping in phases</h2>
+                <p>Cost reduction and compliance first. Correlation and enrichment next. Agentic AI integrates last &mdash; and stays external.</p>
+            </div>
+            <div class="roadmap-grid">
+                <div class="roadmap-card roadmap-card-active" data-animate>
+                    <div class="roadmap-phase">Phase 1</div>
+                    <div class="roadmap-status">In progress</div>
+                    <h3>Cost reduction &amp; compliance</h3>
+                    <ul>
+                        <li>ECS &rarr; OCSF 1.8.0 migration</li>
+                        <li>Rules engine tuned for filtering</li>
+                        <li>Aggregation &amp; deduplication hardening</li>
+                        <li>Audit &amp; logging module for compliance</li>
+                    </ul>
+                </div>
+                <div class="roadmap-card" data-animate>
+                    <div class="roadmap-phase">Phase 2</div>
+                    <div class="roadmap-status">Next</div>
+                    <h3>Correlation &amp; enrichment</h3>
+                    <ul>
+                        <li>Streaming correlation engine</li>
+                        <li>GeoIP, threat intel, asset context</li>
+                        <li>Multi-step detection chains</li>
+                    </ul>
+                </div>
+                <div class="roadmap-card" data-animate>
+                    <div class="roadmap-phase">Phase 3</div>
+                    <div class="roadmap-status">Later</div>
+                    <h3>External Agentic AI</h3>
+                    <ul>
+                        <li>Integrates over the LogSphere API</li>
+                        <li>No AI code inside the pipeline</li>
+                        <li>Powered by the CASSPHERE Agentic AI Engine</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="contact" id="cta">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Get in touch</span>
+                <h2>Ready to cut your SIEM bill?</h2>
+                <p>Tell us about your current log volume and downstream SIEM &mdash; we&rsquo;ll show you how LogSphere reduces cost without losing a byte of compliance data.</p>
+            </div>
+            <div style="display:flex; justify-content:center; gap:1rem; flex-wrap:wrap;">
+                <a href="index.html#contact" class="btn btn-primary btn-lg">Talk to Us</a>
+                <a href="index.html#products" class="btn btn-outline btn-lg">See All Products</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <svg class="logo-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="20" cy="20" r="18" stroke="currentColor" stroke-width="2.5"/>
+                            <circle cx="20" cy="20" r="10" stroke="currentColor" stroke-width="1.5" opacity="0.6"/>
+                            <circle cx="20" cy="20" r="3" fill="currentColor"/>
+                        </svg>
+                        <span>CASSPHERE</span>
+                    </a>
+                    <p>Intelligent security products for the AI era. We build the platforms that protect your business.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Products</h4>
+                    <ul>
+                        <li><a href="soar.html">SOAR Platform</a></li>
+                        <li><a href="logsphere.html">LogSphere</a></li>
+                        <li><a href="index.html#products">DLP Alert Monitoring</a></li>
+                        <li><a href="index.html#products">Agentic AI Engine</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="index.html#about">About</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                        <li><a href="index.html#why-us">Why CASSPHERE</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 CASSPHERE. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
